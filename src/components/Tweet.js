@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 import useSWR from "swr"
 
-import twitterLogo from "../branding/twitterLogo.svg"
-import twitterVerified from "../branding/twitterVerified.svg"
+import twitterLogo from "./branding/twitterLogo.svg"
+import twitterVerified from "./branding/twitterVerified.svg"
 
 
 const Card = styled.article`
