@@ -208,7 +208,7 @@ export function Tweet(props) {
     const [timeString, dateString] = parseDate(data?.created_at)
 
     return (
-        <Card>
+        <Card className={props.className} style={props.style}>
             <BlockLink href={`https://twitter.com/${data?.user?.screen_name}/status/${props.id}`}>
                 <Header>
                     <Avatar src={data?.user?.profile_image_url_https} />
