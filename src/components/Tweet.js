@@ -209,7 +209,7 @@ export function Tweet(props) {
 
     return (
         <Card className={props.className} style={props.style}>
-            <BlockLink href={`https://twitter.com/${data?.user?.screen_name}/status/${props.id}`}>
+            <BlockLink href={`https://twitter.com/${data?.user?.screen_name}/status/${props.id}`} target="_blank" rel="noreferrer noopener">
                 <Header>
                     <Avatar src={data?.user?.profile_image_url_https} />
                     <UserInfo>
