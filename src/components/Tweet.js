@@ -196,7 +196,7 @@ function Media({ data }) {
     return null
 }
 
-export default function Tweet(props) {
+export function Tweet(props) {
     const url = new URL(props.apiUrl)
 
     url.searchParams.append("tweet", props.id)
