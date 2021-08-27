@@ -8,8 +8,16 @@ export default {
 
 const Template = (args) => <Tweet {...args} />
 
-export const TweetStory = Template.bind({})
+export const NotVerified = Template.bind({})
 
-TweetStory.args = {
+NotVerified.args = {
+    id: "1427912476834861064",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}
 
+export const Verified = Template.bind({})
+
+Verified.args = {
+    id: "1431349927263752195",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
 }
