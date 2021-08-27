@@ -51,10 +51,13 @@ const UserInfo = styled.div`
 
     & > strong {
         font-weight: bold;
+        display: flex;
 
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        & > span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
 
     & > span {
@@ -77,7 +80,6 @@ const Verified = styled.img`
 
     margin-left: 4px;
     margin-right: 12px;
-    margin-top: 4px;
 `
 
 const Content = styled.div`
@@ -94,6 +96,15 @@ const Divider = styled.hr`
     border: none;
     height: 1px;
     background-color: rgb(207, 217, 222);
+`
+
+
+const Photo = styled.img`
+    max-width: 100%;
+
+    margin-bottom: 12px;
+
+    border-radius: 16px;
 `
 
 
@@ -151,6 +162,29 @@ const parseDate = (string) => {
     return [timeStr, dateStr]
 }
 
+const isolateContent = (data) => {
+    if (!data) return null
+
+    let text = data.text
+
+    const media = data.entities?.media
+
+    if (media) {
+        for (const object of media) {
+            const [start, end] = object.indices
+            text = text.slice(0, start) + text.slice(end)
+        }
+    }
+
+    return text
+}
+
+function Media({ data }) {
+    if (data?.photos) {
+        return <Photo src={data.photos[0].url} />
+    }
+}
+
 export default function Tweet(props) {
     const url = new URL(props.apiUrl)
 
@@ -159,25 +193,27 @@ export default function Tweet(props) {
 
     const { data } = useSWR(url, fetcher)
 
+    const content = isolateContent(data)
     const [timeString, dateString] = parseDate(data?.created_at)
 
     return (
         <Card>
-            <BlockLink href="https://twitter.com">
+            <BlockLink href={`https://twitter.com/${data?.user?.screen_name}/status/${props.id}`}>
                 <Header>
                     <Avatar src={data?.user?.profile_image_url_https} />
                     <UserInfo>
                         <strong>
-                            {data?.user?.name}
+                            <span>{data?.user?.name}</span>
+                            {data?.user?.verified && <Verified src={twitterVerified} alt="Verified" />}
                         </strong>
                         <span>@{data?.user?.screen_name}</span>
                     </UserInfo>
-                    {data?.user?.verified && <Verified src={twitterVerified} alt="Verified" />}
                     <TwitterLogo src={twitterLogo} alt="Twitter logo" />
                 </Header>
                 <Content>
-                    {data?.text}
+                    {content}
                 </Content>
+                <Media data={data} />
                 <Metadata>
                     <span>{timeString}</span>
                     <span> · </span>

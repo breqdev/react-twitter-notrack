@@ -21,3 +21,10 @@ Verified.args = {
     id: "1431349927263752195",
     apiUrl: "https://twitter-proxy.breq.workers.dev"
 }
+
+export const Image = Template.bind({})
+
+Image.args = {
+    id: "1431350767403814920",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}
