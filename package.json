@@ -1,6 +1,6 @@
 {
   "name": "react-twitter-notrack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Embed Tweets as React components without Twitter tracking scripts.",
   "main": "dist/index.js",
   "private": false,
