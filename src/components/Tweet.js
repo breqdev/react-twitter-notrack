@@ -175,6 +175,10 @@ const isolateContent = (data) => {
         if (token.startsWith("@") || token.startsWith("#")) {
             return <Symbol>{token}</Symbol>
         } else if (token.startsWith("https://")) {
+            const matchingURLs = data.entities.urls.filter(url => url.url === token)
+            if (matchingURLs.length) {
+                return <Symbol>{matchingURLs[0].display_url}</Symbol>
+            }
             return <></>
         } else {
             return <>{token}</>

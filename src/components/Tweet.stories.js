@@ -35,3 +35,25 @@ Reply.args = {
     id: "1431366569083424780",
     apiUrl: "https://twitter-proxy.breq.workers.dev"
 }
+
+export const Link = Template.bind({})
+
+Link.args = {
+    id: "1431368425801191432",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}
+
+export const Hashtag = Template.bind({})
+
+Hashtag.args = {
+    id: "1431366968867622913",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}
+
+
+export const Quote = Template.bind({})
+
+Quote.args = {
+    id: "1431369623174270982",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}
