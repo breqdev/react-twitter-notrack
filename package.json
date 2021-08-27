@@ -1,0 +1,23 @@
+{
+  "name": "react-twitter-notrack",
+  "version": "0.1.0",
+  "description": "Embed Tweets as React components without Twitter tracking scripts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Breq16/react-twitter-notrack.git"
+  },
+  "keywords": [
+    "twitter",
+    "react"
+  ],
+  "author": "Brooke Chalmers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Breq16/react-twitter-notrack/issues"
+  },
+  "homepage": "https://github.com/Breq16/react-twitter-notrack#readme"
+}
