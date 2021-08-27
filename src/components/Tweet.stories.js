@@ -28,3 +28,10 @@ Image.args = {
     id: "1431350767403814920",
     apiUrl: "https://twitter-proxy.breq.workers.dev"
 }
+
+export const Reply = Template.bind({})
+
+Reply.args = {
+    id: "1431366569083424780",
+    apiUrl: "https://twitter-proxy.breq.workers.dev"
+}

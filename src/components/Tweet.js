@@ -162,27 +162,34 @@ const parseDate = (string) => {
     return [timeStr, dateStr]
 }
 
+const Symbol = styled.span`
+    color: rgb(27, 149, 224);
+`
+
 const isolateContent = (data) => {
     if (!data) return null
 
-    let text = data.text
+    const tokens = data.text.split(" ")
 
-    const media = data.entities?.media
-
-    if (media) {
-        for (const object of media) {
-            const [start, end] = object.indices
-            text = text.slice(0, start) + text.slice(end)
+    const elements = tokens.map((token) => {
+        if (token.startsWith("@") || token.startsWith("#")) {
+            return <Symbol>{token}</Symbol>
+        } else if (token.startsWith("https://")) {
+            return <></>
+        } else {
+            return <>{token}</>
         }
-    }
+    })
 
-    return text
+    return elements.reduce((prev, curr) => [prev, " ", curr])
 }
 
 function Media({ data }) {
     if (data?.photos) {
         return <Photo src={data.photos[0].url} />
     }
+
+    return null
 }
 
 export default function Tweet(props) {
