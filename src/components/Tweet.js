@@ -202,7 +202,7 @@ export function Tweet(props) {
     url.searchParams.append("tweet", props.id)
     url.searchParams.append("lang", props.lang || "en")
 
-    const { data } = useSWR(url, fetcher)
+    const { data } = useSWR(url.toString(), fetcher)
 
     const content = isolateContent(data)
     const [timeString, dateString] = parseDate(data?.created_at)
