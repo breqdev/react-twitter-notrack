@@ -1,0 +1,26 @@
+{
+  "files": {
+    "0.359b966b.iframe.bundle.js": "./0.359b966b.iframe.bundle.js",
+    "main.js": "./main.c9a2e196.iframe.bundle.js",
+    "runtime~main.js": "./runtime~main.d29d71bf.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.f7b57af9.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.f7b57af9.iframe.bundle.js.map",
+    "4.3d35ae9c.iframe.bundle.js": "./4.3d35ae9c.iframe.bundle.js",
+    "4.3d35ae9c.iframe.bundle.js.map": "./4.3d35ae9c.iframe.bundle.js.map",
+    "5.d0413216.iframe.bundle.js": "./5.d0413216.iframe.bundle.js",
+    "6.4c5f1048.iframe.bundle.js": "./6.4c5f1048.iframe.bundle.js",
+    "6.4c5f1048.iframe.bundle.js.map": "./6.4c5f1048.iframe.bundle.js.map",
+    "7.c2e99f68.iframe.bundle.js": "./7.c2e99f68.iframe.bundle.js",
+    "4.3d35ae9c.iframe.bundle.js.LICENSE.txt": "./4.3d35ae9c.iframe.bundle.js.LICENSE.txt",
+    "6.4c5f1048.iframe.bundle.js.LICENSE.txt": "./6.4c5f1048.iframe.bundle.js.LICENSE.txt",
+    "iframe.html": "./iframe.html",
+    "static/media/twitterLogo.4efc8108.svg": "./static/media/twitterLogo.4efc8108.svg",
+    "static/media/twitterVerified.233013ba.svg": "./static/media/twitterVerified.233013ba.svg",
+    "vendors~main.f7b57af9.iframe.bundle.js.LICENSE.txt": "./vendors~main.f7b57af9.iframe.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.d29d71bf.iframe.bundle.js",
+    "vendors~main.f7b57af9.iframe.bundle.js",
+    "main.c9a2e196.iframe.bundle.js"
+  ]
+}
