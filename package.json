@@ -55,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Breq16/react-twitter-notrack.git"
+    "url": "git+https://github.com/breqdev/react-twitter-notrack.git"
   },
   "keywords": [
     "twitter",
@@ -64,9 +64,9 @@
   "author": "Brooke Chalmers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Breq16/react-twitter-notrack/issues"
+    "url": "https://github.com/breqdev/react-twitter-notrack/issues"
   },
-  "homepage": "https://github.com/Breq16/react-twitter-notrack#readme",
+  "homepage": "https://github.com/breqdev/react-twitter-notrack#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/preset-env": "^7.15.0",
