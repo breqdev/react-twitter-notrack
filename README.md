@@ -1,5 +1,9 @@
 # react-twitter-notrack
 
+⚠️ *Unfortunately, things seem to have stopped working, probably as a result of Twitter improving their bot detection or shutting down their API. There were enough tradeoffs inherent in this project that I don't intend to continue maintaining it. Thus, it is no longer usable.*
+
+---
+
 A component library for Twitter widgets built without Twitter's tracking scripts.
 
 ```js
